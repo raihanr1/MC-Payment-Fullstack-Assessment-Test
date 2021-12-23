@@ -3,6 +3,6 @@ const routerUsers = require('./user')
 const routerTransaction = require('./transaction')
 
 router.use('/users', routerUsers)
-router.use('/balances', routerTransaction)
+router.use('/transactions', routerTransaction)
 
 module.exports = router
