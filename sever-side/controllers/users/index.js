@@ -1,5 +1,5 @@
 const registerUser = require('./register')
-const createBalance = require('../transactions/balance')
+const {createBalance} = require('../transactions/balance')
 const userLogin = require('./login')
 const responseUserRegister = async (req,res,next) => {
     try {
@@ -22,7 +22,7 @@ const responseUserLogin = async (req, res, next) => {
     try {
         const {email, password} = req.body
         let response = await userLogin({email, password})
-        res.status(200).json(response)
+        res.status(202).json(response)
     } catch (error) {
         next(error)
     }
