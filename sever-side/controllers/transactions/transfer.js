@@ -30,7 +30,6 @@ const successTransferAmount = async (userLogin, amount,user_id) => {
         let getPayment = {
             amount: user.amount + amount
         }
-        console.log(getPayment, user.amount, amount)
         let [successTransfer, balanceUser] = await updateBalance(user_id,getPayment, t)
         let getUserTransfer = await getUser(user_id)
         let history = {
