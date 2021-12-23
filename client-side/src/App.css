@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+.sidebar-container {
+  margin-top: -17px;
+  height: 705px;
+  width: 160px;
+  background-color: rgb(249, 250, 253);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homepage-container {
+  width: 1150px;
+  height: 689px;
+  margin-top: -7px;
+  margin-left: -40px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  background-color: rgb(253, 254, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: rgb(20, 70, 145);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  color: rgb(163, 159, 159);
 }
 
-.App-link {
-  color: #61dafb;
+.icon-navbar img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.activities-container {
+  border-radius: 20px;
+  width: 450px;
+  height: 250px;
+}
+
+.statistic-container {
+  padding: 5px;
+  border-radius: 20px;
+  width: 320px;
+  height: 185px;
+  background-color: rgb(249, 250, 253);
+}
+
+.card-info-container {
+  border-radius: 20px;
+  width: 250px;
+  height: 195px;
+  background-color: rgb(249, 250, 253);
+}
+
+.transaction-container {
+  border-radius: 20px;
+  width: 448px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.goals-budget-container {
+  padding: 5px;
+  border-radius: 20px;
+  width: 320px;
+  height: 150px;
+  background-color: rgb(249, 250, 253);
+}
+
+.sub {
+  margin-left: 10px;
+}
+
+.scroolbar-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
 }
