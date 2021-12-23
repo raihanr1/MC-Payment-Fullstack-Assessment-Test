@@ -9,7 +9,7 @@ const userLogin = async ({email, password}) => {
     })
     if (!response) {
         throw {
-            message: 'User not found'
+            message: 'Invalid email or password'
         }
     }
     if (!comparePassword(password,response.password)) {
