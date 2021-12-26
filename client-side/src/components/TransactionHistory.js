@@ -1,5 +1,6 @@
 import CardTransaction from "./CardTransaction";
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 const styles = {
   fontSize: "10px",
   marginLeft: "10px",
@@ -9,6 +10,14 @@ export default function TransactionHistory() {
   const { usersInformation, loading, error } = useSelector(
     (state) => state.transaction
   );
+  const [transaction, setTransaction] = useState([]);
+  useEffect(() => {
+    if (Object.keys(usersInformation).length && !loading) {
+      let transaction = usersInformation.transaction;
+      let filtered = transaction.filter((el) => el.status !== "Goals Budget");
+      setTransaction(filtered);
+    }
+  }, [usersInformation, loading]);
   return (
     <div>
       <div style={{ display: "flex" }}>
@@ -31,8 +40,8 @@ export default function TransactionHistory() {
       </div>
       <div className="transaction-container">
         <div className="scroolbar-content" style={{ cursor: "all-scroll" }}>
-          {usersInformation.transaction && !loading
-            ? usersInformation.transaction.map((el, i) => {
+          {transaction.length && !loading
+            ? transaction.map((el, i) => {
                 return <CardTransaction transaction={el} key={i} />;
               })
             : null}
