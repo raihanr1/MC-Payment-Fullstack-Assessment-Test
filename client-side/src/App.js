@@ -2,11 +2,19 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "./pages/Home";
 import LoginPage from "./pages/login";
+import RequireAuth from "./middleware/AuthenticationUser";
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />}></Route>
-      <Route path="/" element={<HomePage />} />
+      <Route
+        path="/"
+        element={
+          <RequireAuth>
+            <HomePage />
+          </RequireAuth>
+        }
+      />
       <Route
         path="*"
         element={
