@@ -6,7 +6,7 @@ import GoalsBudget from "./GoalsBudget";
 import StatisticGraphic from "./StatisticGraphic";
 import TransactionHistory from "./TransactionHistory";
 import { getUserInformation } from "../store/action/transactionAction";
-
+import ActionTransaction from "./ActionTransaction";
 export default function HomeComponent() {
   const dispatch = useDispatch();
   const { usersInformation, loading, error } = useSelector(
@@ -27,6 +27,7 @@ export default function HomeComponent() {
       <div style={{ display: "flex", marginTop: "20px" }}>
         <TransactionHistory />
         <GoalsBudget />
+        <ActionTransaction />
       </div>
     </div>
   );
