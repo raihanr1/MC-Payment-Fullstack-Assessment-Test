@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Balance extends Model {
     /**
@@ -10,37 +8,40 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Balance.belongsTo(models.User, {foreignKey: 'account_id', as: 'user'})
+      Balance.belongsTo(models.User, { foreignKey: "account_id", as: "user" });
     }
-  };
-  Balance.init({
-    account_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Account id is required'
+  }
+  Balance.init(
+    {
+      account_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Account id is required",
+          },
+          notEmpty: {
+            msg: "Account id is required",
+          },
         },
-        notEmpty: {
-          msg: 'Account id is required'
-        }
-      }
+      },
+      amount: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Balance amount is required",
+          },
+          notEmpty: {
+            msg: "Balance amount is required",
+          },
+        },
+      },
     },
-    amount: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Balance amount is required'
-        },
-        notEmpty: {
-          msg: 'Balance amount is required'
-        }
-      }
+    {
+      sequelize,
+      modelName: "Balance",
     }
-  }, {
-    sequelize,
-    modelName: 'Balance',
-  });
+  );
   return Balance;
 };
