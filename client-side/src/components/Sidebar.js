@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import iconPayment from "../assets/icons8-payment-64.png";
 import iconMenu from "../assets/icons8-squared-menu-50.png";
 
 export default function Sidebar() {
+  const navigate = useNavigate();
+  const goToDashBoard = () => {
+    navigate("/");
+  };
   return (
     <div className="sidebar-container">
       <div style={{ padding: "30px" }}>
@@ -25,12 +30,14 @@ export default function Sidebar() {
           ></img>
         </div>
         <div
+          onClick={() => goToDashBoard()}
           style={{
             backgroundColor: "rgb(241, 243, 253)",
             width: "60px",
             height: "60px",
             marginTop: "40px",
             borderRadius: "8px",
+            cursor: "pointer",
           }}
         >
           <img
