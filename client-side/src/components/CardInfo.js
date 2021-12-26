@@ -7,7 +7,7 @@ export default function CardInfo() {
   return (
     <div style={{ marginLeft: "20px" }}>
       <h1 className="sub">Card Info</h1>
-      <div className="card-info-container">
+      <div className="container">
         <div
           style={{
             width: "250px",
