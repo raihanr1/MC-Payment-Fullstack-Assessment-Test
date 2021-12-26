@@ -15,6 +15,7 @@ export default function Navbar() {
     dispatch({
       type: USER_LOGOUT,
     });
+    localStorage.removeItem("access_token");
     navigate("/login");
   };
   useEffect(() => {
