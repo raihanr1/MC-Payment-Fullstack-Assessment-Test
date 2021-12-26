@@ -1,12 +1,14 @@
 # MC-Payment-Fullstack-Assessment-Test
 
 ## 1. logic
+
 A. Two Sums
 
 Given an array of integers nums and an integer target, return indices of the two numbers
 such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use
 the same element twice. You can return the answer in any order.
+
 ```
 Example 1:
 Input: nums = [2,7,11,15], target = 13
@@ -23,12 +25,13 @@ Output: [0,1]
 
 ```
 
-
 ## 2. Budget Application
+
 We need to have a web app that can help us track our income, expenses and the balance,
 and all the data is stored / fetched via REST API to backend server.
 
 Point to review:
+
 ```
 1. You have to create backend server for REST API endpoint
 2. You have to make a responsive site for the frontend
@@ -38,4 +41,16 @@ SASS / LESS), without any framework like bootstrap etc
 5. No jquery
 6. Write a clean and scalable code is nice to have
 
+```
+
+```
+1. cd ./sever-side
+2. npm install
+3. npx sequelize-cli db:create
+4. npm run reset:migrate:seed
+5. cd ./seeders
+6. On terminal node seedUser.js (seed user)
+7. cd client-side
+8. npm install
+9. npm run start
 ```
