@@ -1,0 +1,522 @@
+body {
+  background-color: rgb(249, 250, 253);
+}
+
+.main {
+  width: 350px;
+  height: 500px;
+  background: red;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 10px 20px #000;
+  margin: auto;
+  margin-top: 80px;
+}
+#check {
+  display: none;
+}
+.signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.signup label {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.login label {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.signup input {
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.login input {
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.login button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.signup button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.signup button:hover {
+  background: #6d44b8;
+}
+.login button:hover {
+  background: #6d44b8;
+}
+.login {
+  height: 460px;
+  background: rgb(249, 250, 253);
+  border-radius: 60% / 10%;
+  transform: translateY(-180px);
+  transition: 0.8s ease-in-out;
+}
+.login label {
+  color: #573b8a;
+  transform: scale(0.6);
+}
+
+#check:checked ~ .login {
+  transform: translateY(-500px);
+}
+#check:checked ~ .login label {
+  transform: scale(1);
+}
+#check:checked ~ .signup label {
+  transform: scale(0.6);
+}
+/*  */
+.sidebar-container {
+  margin-top: -17px;
+  height: 705px;
+  width: 160px;
+  background-color: rgb(249, 250, 253);
+}
+
+.homepage-container {
+  width: 1150px;
+  height: 689px;
+  margin-top: -7px;
+  margin-left: -40px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  background-color: rgb(253, 254, 255);
+}
+
+h1 {
+  color: rgb(20, 70, 145);
+}
+
+p {
+  color: rgb(163, 159, 159);
+}
+
+.icon-navbar img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.activities-container {
+  border-radius: 20px;
+  width: 450px;
+  height: 250px;
+}
+
+.statistic-container {
+  padding: 5px;
+  border-radius: 20px;
+  width: 320px;
+  height: 185px;
+  background-color: rgb(249, 250, 253);
+}
+
+.container {
+  border-radius: 20px;
+  width: 250px;
+  height: 195px;
+  background-color: rgb(249, 250, 253);
+}
+
+.transaction-container {
+  border-radius: 20px;
+  width: 448px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.goals-budget-container {
+  padding: 5px;
+  border-radius: 20px;
+  width: 320px;
+  height: 150px;
+  background-color: rgb(249, 250, 253);
+}
+
+.sub {
+  margin-left: 10px;
+}
+
+.scroolbar-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
+  cursor: all-scroll;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.amount {
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.transaction-action p {
+  margin-left: 30px;
+}
+.transaction-action div {
+  display: flex;
+}
+
+.button {
+  color: black;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 40px;
+  height: 15px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+}
+
+.button-1 {
+  border: 2px solid rgb(159, 245, 245);
+}
+
+.button-2 {
+  border: 2px solid rgb(106, 116, 168);
+}
+
+.button-3 {
+  border: 2px solid rgb(255, 214, 80);
+}
+
+.button-1:hover {
+  background-color: rgb(159, 245, 245);
+  color: white;
+}
+
+.button-2:hover {
+  background-color: rgb(106, 116, 168);
+  color: white;
+}
+
+.button-3:hover {
+  background-color: rgb(255, 214, 80);
+  color: white;
+}
+
+/* modal */
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.315);
+  transition: opacity 0.5s;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked + .modal .modal-inner {
+  top: 0;
+}
+
+.modal-inner {
+  transition: top 0.25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 30%;
+}
+
+.modal-close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modal-close:after,
+.modal-close:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modal-close:hover:after,
+.modal-close:hover:before {
+  background: #aaa;
+}
+
+.modal-close:before {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .modal-inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
+}
+
+/* error alert */
+
+.error-container {
+  background-color: rgb(241, 236, 241);
+  margin-top: -10px;
+  width: 360px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.error-container p {
+  margin-top: -1px;
+  padding: 5px;
+  margin-left: 0px;
+  color: red;
+}
+
+.error-container-2 {
+  background-color: rgb(241, 236, 241);
+  margin-top: -10px;
+  width: 307px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.error-container-2 p {
+  margin-top: -1px;
+  padding: 5px;
+  margin-left: 0px;
+  color: red;
+}
+
+/* loading */
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 5px;
+  height: 5px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(48, 43, 43);
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* statistic pie chart */
+
+.ChartBlock {
+  width: 50%;
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: -140px;
+}
+.ChartPie {
+  outline: 2px red;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.ChartPie:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.ChartPieChunk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Slice {
+  transition: transform 0.5s;
+  transform-origin: center center;
+}
